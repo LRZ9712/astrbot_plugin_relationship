@@ -155,10 +155,10 @@ class RequestDecision:
 
         if self.cfg.manage_group:
             result.user_reply = (
-                f"群邀请已收到，需要在审核群 {self.cfg.manage_group} 审批后才能加入"
+                f"群邀请已收到，需要在审核群 {self.cfg.manage_group} 发个5r拼手气红包管理员审批后才能加入"
             )
         else:
-            result.user_reply = "群邀请已收到，需要审核通过后才能加入"
+            result.user_reply = "群邀请已收到，需要在审核群发个5r拼手气红包通过后才能加入"
 
         if self.cfg.is_black_group(req.group_id):
             result.admin_reply += "\n警告: 该群为黑名单群聊，请谨慎通过"
