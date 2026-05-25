@@ -142,6 +142,7 @@ class GroupRequest(BaseRequest):
     group_id: str
     flag: str
     comment: str
+    request_requirement: str = "在本群发一个5r的拼手气红包，分20个包"
 
     _HEADER = "【群邀请】同意/拒绝："
     _FIELD_MAP = {
@@ -151,6 +152,7 @@ class GroupRequest(BaseRequest):
         "群号": "group_id",
         "flag": "flag",
         "验证信息": "comment",
+        "拉我要求": "request_requirement",
     }
 
     @property
